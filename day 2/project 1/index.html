@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>counter</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<body>
+    <div class="container1">
+        <div class="logo-container">
+            <i class="fa fa-twitter"></i>
+        </div>
+        <div id="counter">
+            0
+        </div>
+    </div>
+    <script>
+        const myInterval = setInterval(update, 10);
+        var count =0;
+        function update()
+        {
+            count=count+1;
+            document.getElementById("counter").innerHTML=count;
+            if(count>99)
+            {
+                clearInterval(myInterval);
+            }
+        }
+    </script>
+</body>
+</html>
